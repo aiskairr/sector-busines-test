@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.w_pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 41px;
+  align-items: center;
+  button {
+    border: none;
+    background-color: transparent;
+    outline: 0;
+    cursor: pointer;
+  }
+  > button {
+    color: $mainColor;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  > div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    button {
+      color: $mainColor;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 137.687%;
+    }
+  }
+}
+.activePageButton {
+  color: #7ebc3c !important;
+}

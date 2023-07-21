@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.w_table_card {
+  display: grid;
+  grid-template-columns: 120px 2fr 1.7fr;
+  height: 78px;
+  align-items: center;
+  > div {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid $borderColor;
+    p {
+      color: $mainColor;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 137.687%;
+    }
+  }
+}
+.activeText {
+  color: black;
+  font-weight: 900;
+}
