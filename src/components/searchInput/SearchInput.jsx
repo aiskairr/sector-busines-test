@@ -10,7 +10,7 @@ const SearchInput = () => {
 
   useEffect(() => {
     const filteredData = postsData.filter((item) => {
-      return item.title.toLowerCase().startsWith(searchQuery.toLowerCase()) || item.body.toLowerCase().startsWith(searchQuery.toLowerCase());
+      return item.title.toLowerCase().includes(searchQuery.toLowerCase()) && item.body.toLowerCase().includes(searchQuery.toLowerCase());
     });
     dispatch(setSearchResult(filteredData));
   }, [postsData, searchQuery, dispatch]);
