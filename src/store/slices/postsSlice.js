@@ -10,6 +10,7 @@ export const counterSlice = createSlice({
   initialState: {
     data: [],
     SearchResult: [],
+    currentItems: [],
     searchQuery: "",
     isAscending: true,
   },
@@ -33,14 +34,18 @@ export const counterSlice = createSlice({
       });
       state.data = sort;
     },
+    currentPaginationItems: (state, action) => {
+        state.currentItems = action.payload
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(fetchPosts.fulfilled, (state, action) => {
       state.data = action.payload;
+      console.log(action.payload);
     });
   },
 });
 
-export const { setSearchResult, setSearchQuery, toggleSortOrder, sortData } = counterSlice.actions;
+export const { setSearchResult, setSearchQuery, toggleSortOrder, sortData, currentPaginationItems } = counterSlice.actions;
 
 export default counterSlice.reducer;

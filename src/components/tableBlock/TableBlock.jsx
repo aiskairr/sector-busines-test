@@ -32,6 +32,7 @@ const TableBlock = () => {
         </div>
       </div>
       <div className={scss.table_body__item}>
+      
         <Pagination />
       </div>
     </div>

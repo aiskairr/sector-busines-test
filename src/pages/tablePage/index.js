@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import SearchInput from "../../components/searchInput/SearchInput";
 import TableBlock from "../../components/tableBlock/TableBlock";
 import { fetchPosts } from "../../store/slices/postsSlice";
@@ -9,8 +9,6 @@ const TablePage = () => {
   useEffect(() => {
     dispatch(fetchPosts());
   }, [dispatch]);
-  const tableData = useSelector((state) => state.posts.SearchResult);
-  tableData.map((item) => console.log(item));
   return (
     <div>
       <SearchInput />

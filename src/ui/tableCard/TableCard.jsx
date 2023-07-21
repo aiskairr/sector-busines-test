@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import scss from "./TableCard.module.scss";
 
-const TableCard = ({ body, id, title, userId }) => {
+const TableCard = ({ body, id, title }) => {
   const searchQuery = useSelector((state) => state.posts.searchQuery);
   const highlightText = (text, query) => {
     if (!query) return text;

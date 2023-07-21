@@ -7,4 +7,12 @@
 }
 .App{
     padding: 23px 78px 0 78px;
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    .App{
+        padding: 10px;
+    }
+    
 }

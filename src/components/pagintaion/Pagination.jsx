@@ -1,4 +1,4 @@
-import scss from "./Pagination.module.scss"
+import scss from "./Pagination.module.scss";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import TableCard from "../../ui/tableCard/TableCard";
@@ -12,6 +12,7 @@ const Pagination = ({ itemsPerPage = 10 }) => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+
 
   const goToPrevPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
@@ -33,7 +34,7 @@ const Pagination = ({ itemsPerPage = 10 }) => {
   return (
     <div>
       {currentItems.map((item) => (
-        <TableCard {...item} />
+        <TableCard key={item.id} {...item} />
       ))}
 
       <div className={scss.w_pagination}>
@@ -43,7 +44,13 @@ const Pagination = ({ itemsPerPage = 10 }) => {
 
         <div>
           {pageNumbers.map((pageNumber) => (
-            <button className={pageNumber === currentPage ? scss.activePageButton : ''} key={pageNumber} onClick={() => goToPage(pageNumber)}>
+            <button
+              className={
+                pageNumber === currentPage ? scss.activePageButton : ""
+              }
+              key={pageNumber}
+              onClick={() => goToPage(pageNumber)}
+            >
               {pageNumber}
             </button>
           ))}
