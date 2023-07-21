@@ -25,7 +25,6 @@ const Pagination = ({ itemsPerPage = 10 }) => {
     setCurrentPage(pageNumber);
   };
 
-  // Генерируем массив чисел от 1 до totalPages для кнопок с номерами страниц
   const pageNumbers = Array.from(
     { length: totalPages },
     (_, index) => index + 1
