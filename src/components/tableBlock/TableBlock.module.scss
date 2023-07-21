@@ -2,13 +2,18 @@
 
 .w__tableBlock {
   margin-top: 15px;
-  max-width: 1081px;
   @media (max-width: 1250px) {
+  max-width: 1081px;
+
     overflow-x: scroll;
   }
   .table_header__item {
     display: grid;
+    grid-template-columns: 120px 2fr 1.7fr;
+    @media (max-width: 1250px) {
     grid-template-columns: 120px 529px 432px;
+        
+    }
     height: 52px;
 
     > div {
