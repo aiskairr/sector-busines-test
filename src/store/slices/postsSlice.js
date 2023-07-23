@@ -13,6 +13,7 @@ export const counterSlice = createSlice({
     currentItems: [],
     searchQuery: "",
     isAscending: true,
+    progress: 5
   },
   reducers: {
     setSearchResult: (state, action) => {
@@ -41,7 +42,14 @@ export const counterSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchPosts.fulfilled, (state, action) => {
       state.data = action.payload;
-      console.log(action.payload);
+      state.progress = 100;
+    });
+    builder.addCase(fetchPosts.pending, (state) => {
+      state.progress = 70;
+    });
+
+    builder.addCase(fetchPosts.rejected, (state, action) => {
+      state.progress = 100;
     });
   },
 });
