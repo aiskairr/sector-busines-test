@@ -15,19 +15,19 @@ const TableBlock = () => {
         <div className={scss.b_table}>
           <button onClick={handleSort} className={scss.i__table_button}>
             <span className={scss.button__title}>ID</span>
-            <img src="./images/theadImages/arrow.svg" alt="arrow" />
+            <img src="/images/theadImages/arrow.svg" alt="arrow" />
           </button>
         </div>
         <div className={scss.b_table}>
           <button onClick={handleSort} className={scss.i__table_button}>
             <span className={scss.button__title}>Заголовок</span>
-            <img src="./images/theadImages/arrow.svg" alt="arrow" />
+            <img src="/images/theadImages/arrow.svg" alt="arrow" />
           </button>
         </div>
         <div className={scss.b_table}>
           <button onClick={handleSort} className={scss.i__table_button}>
             <span className={scss.button__title}>Описание</span>
-            <img src="./images/theadImages/arrow.svg" alt="arrow" />
+            <img src="/images/theadImages/arrow.svg" alt="arrow" />
           </button>
         </div>
       </div>

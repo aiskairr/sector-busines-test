@@ -28,7 +28,7 @@ const SearchInput = () => {
           onChange={(e) => handleSearch(e.target.value)}
         />
         <span>
-          <img src="./images/inputImages/search.svg" alt="searchIcon" />
+          <img src="/images/inputImages/search.svg" alt="searchIcon" />
         </span>
       </label>
     </form>
